@@ -28,7 +28,7 @@ describe('Tax Calculator', function () {
         assert.equal(calculateTax(36000), 4800);
     });
 
-    it('should return 4800 tax for earnings of £37000', function () {
+    it('should return 5200 tax for earnings of £37000', function () {
         // First £12000: £0 tax
         // Next £24000 (£12000-£36000): £4800 tax (20%)
         // Next £1000 (£36000-£37000): £400 tax (40%)
