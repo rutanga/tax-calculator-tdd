@@ -13,4 +13,8 @@ describe('Tax Calculator', function () {
     it('should return 0 tax for earnings of £11999', function () {
         assert.equal(calculateTax(11999), 0);
     });
+
+    it('should return 0 tax for earnings of £12000', function () {
+        assert.equal(calculateTax(12000), 0);
+    });
 });
