@@ -27,4 +27,12 @@ describe('Tax Calculator', function () {
         // £36000 - £12000 = £24000 taxable at 20% = £4800
         assert.equal(calculateTax(36000), 4800);
     });
+
+    it('should return 4800 tax for earnings of £37000', function () {
+        // First £12000: £0 tax
+        // Next £24000 (£12000-£36000): £4800 tax (20%)
+        // Next £1000 (£36000-£37000): £400 tax (40%)
+        // Total: £0 + £4800 + £400 = £5200
+        assert.equal(calculateTax(37000), 5200);
+    });
 });
