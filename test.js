@@ -17,4 +17,9 @@ describe('Tax Calculator', function () {
     it('should return 0 tax for earnings of £12000', function () {
         assert.equal(calculateTax(12000), 0);
     });
+
+    it('should return 200 tax for earnings of £13000', function () {
+        // £13000 - £12000 = £1000 taxable at 20% = £200
+        assert.equal(calculateTax(13000), 200);
+    });
 });
