@@ -35,4 +35,12 @@ describe('Tax Calculator', function () {
         // Total: £0 + £4800 + £400 = £5200
         assert.equal(calculateTax(37000), 5200);
     });
+
+    it('should return 9200 tax for earnings of £47000', function () {
+        // First £12000: £0 tax
+        // Next £24000 (£12000-£36000): £4800 tax (20%)
+        // Next £11000 (£36000-£47000): £4400 tax (40%)
+        // Total: £0 + £4800 + £4400 = £9200
+        assert.equal(calculateTax(47000), 9200);
+    });
 });
